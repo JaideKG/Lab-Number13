@@ -12,7 +12,6 @@ namespace Lab_Number13
         { }
         override public int generateRoshambo()
         {
-
             return 0;
         }
     }

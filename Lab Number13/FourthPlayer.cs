@@ -12,9 +12,8 @@ namespace Lab_Number13
         { }
         override public int generateRoshambo()
         {
-            Random rnd = new Random();
-            return rnd.Next(0, 2);
-
+            return (int)Validator.ValidChoice();
+            
         }
 
     }

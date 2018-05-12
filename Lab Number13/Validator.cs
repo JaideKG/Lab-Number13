@@ -19,13 +19,13 @@ namespace Lab_Number13
             {
 
 
-                Console.WriteLine("Please select either Rock, Papepr, or Scissors.");
+                Console.WriteLine("Please select either Rock, Paper, or Scissors.");
                 string input = Console.ReadLine();
 
-               
+
                 if (input != "Rock" && input != "Paper" && input != "Scissors")
                 {
-                    continue;
+                    Console.WriteLine("Your choice was invalid. Please try again.");
                 }
                 else if (input == "Rock")
                 {
@@ -39,17 +39,71 @@ namespace Lab_Number13
                 {
                     return Roshambo.Scissors;
                 }
-                
 
-              
 
-                
-                
 
-    
 
-   
             }
+
+
         }
-    }
+        //0 = Rock, 1 = Paper, 2 = Scissors
+        //4 = Draw, 5 = Loss, 6 = Win
+        public static int Referee(int User, int Computer)
+        {
+            if (User == 0 && Computer == 0)
+            {
+                Console.WriteLine("Draw!");
+                return 4;
+            }
+            else if (User == 0 && Computer == 1)
+            {
+                Console.WriteLine("Loss!");
+                return 5;
+            }
+            else if (User == 0 && Computer == 2)
+            {
+                Console.WriteLine("Win!");
+                return 6;
+            }
+            else if (User == 1 && Computer == 0)
+            {
+                Console.WriteLine("Win!");
+                return 6;
+            }
+            else if (User == 1 && Computer == 1)
+            {
+                Console.WriteLine("Draw!");
+                return 4;
+            }
+            else if (User == 1 && Computer == 2)
+            {
+                Console.WriteLine("Loss!");
+                return 5;
+            }
+            else if (User == 2 && Computer == 0)
+            {
+                Console.WriteLine("Loss!");
+                return 5;
+            }
+            else if (User == 2 && Computer == 1)
+            {
+                Console.WriteLine("Win!");
+                return 6;
+            }
+            else if (User == 2 && Computer == 2)
+            {
+                Console.WriteLine("Draw!");
+                return 4;
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+    } 
 }
+  
+        
+            
