@@ -18,16 +18,29 @@ namespace Lab_Number13
 
             Console.WriteLine("Enter your name:");
             string playerName = Console.ReadLine();
-
-
-            bool again = true;
-            while (again)
-                
+            while (playerName == "")
             {
+                Console.WriteLine("Your input is invalid.");
+                Console.WriteLine("Please enter a name.");
+                playerName = Console.ReadLine();
+            }
 
-                             
+
+
+                bool again = true;
+            while (again)
+
+            {
+                               
                 Console.Write("Would you like to play against Pat or Max (P/M)?:");
                 string Opponent = Console.ReadLine();
+                while (Opponent != "P" && Opponent != "M")
+                {
+                    Console.WriteLine("Your input is invalid.");
+                    Console.WriteLine("Please enter P for Pat or M for Max.");
+                    Opponent = Console.ReadLine();
+                }
+                
 
                 FourthPlayer playerfour = new FourthPlayer();
                 playerfour.name = playerName;
@@ -98,6 +111,12 @@ namespace Lab_Number13
 
                 Console.WriteLine("Play again? (Y/N)");
                 string userInput = Console.ReadLine();
+                while(userInput != "Y" && userInput != "N")
+                {
+                    Console.WriteLine("Your input is invalid.");
+                    Console.WriteLine("Please select either Y for Yes or N for No.");
+                    userInput = Console.ReadLine();
+                }
 
                 if (userInput.ToLower() == "n")
                 {

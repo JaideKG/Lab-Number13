@@ -14,7 +14,7 @@ namespace Lab_Number13
             //Roshambo.Rock
             //second by index
             //(Roshambo)0  change this number for diff values
-
+                        
             while (true)
             {
 

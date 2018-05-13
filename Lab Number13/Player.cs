@@ -18,7 +18,7 @@ namespace Lab_Number13
         
 
         public string name { get; set; }
-
+            
         public string response { get; set; }
         public int valueRoshambo { get; set; }
         abstract public int generateRoshambo();
